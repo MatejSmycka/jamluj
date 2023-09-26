@@ -1,4 +1,4 @@
-package github.com/MatejSmycka/jamluj
+package main
 
 import (
 	"flag"
