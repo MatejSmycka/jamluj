@@ -27,14 +27,14 @@ type Task struct {
 func executeCommand(command string, python bool) error {
 	if python {
 		command = "poetry run python" + command
-
+	}
 	cmd := exec.Command("bash", "-c", command)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
 	return cmd.Run()
 }
 
-func executeCommands(commands []string, python bool) error {
+func executeCommandGroup(commands []string, python bool) error {
 	var wg sync.WaitGroup
 	for _, command := range commands {
 		wg.Add(1)
@@ -61,7 +61,7 @@ func runTask(task Task) {
 				commands = append(commands, val)
 			}
 		}
-		if err := executeCommands(commands, task.Command.Python); err != nil {
+		if err := executeCommandGroup(commands, task.Command.Python); err != nil {
 			fmt.Println("Error:", err)
 		}
 
@@ -92,3 +92,4 @@ func main() {
 		}
 	}
 }
+
