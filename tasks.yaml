@@ -1,0 +1,13 @@
+---
+run:
+  - command:
+      val: echo 1
+  - command:
+      val: # List are runner in parralel
+        - echo 2
+        - sleep 10
+        - echo 3
+        - echo 4
+        - echo 5
+  - command:
+      val: echo 6
