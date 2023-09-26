@@ -1,4 +1,5 @@
-package jamluj
+
+package main
 
 import (
 	"flag"
@@ -27,7 +28,7 @@ type Task struct {
 func executeCommand(command string, python bool) error {
 	if python {
 		command = "poetry run python" + command
-	}
+
 	cmd := exec.Command("bash", "-c", command)
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr

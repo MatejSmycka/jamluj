@@ -1,4 +1,4 @@
-module github.com/MatejSmycka/jamluj
+module jamluj
 
 go 1.18
 
