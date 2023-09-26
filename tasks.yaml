@@ -11,3 +11,7 @@ run:
         - echo 5
   - command:
       val: echo 6
+  - command:
+      val:
+        - echo 4444
+        - echo 5555

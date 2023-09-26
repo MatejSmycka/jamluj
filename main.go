@@ -1,4 +1,4 @@
-package main
+package jamluj
 
 import (
 	"flag"
