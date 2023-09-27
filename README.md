@@ -1,4 +1,4 @@
-# YAMLUJ
+# JAMLUJ
 
 This tool is CLI Runner for jobs, which are defined in YAML file.
 
